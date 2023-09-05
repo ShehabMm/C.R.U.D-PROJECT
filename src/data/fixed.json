@@ -1,0 +1,7 @@
+[
+  { "id": 0, "name": "Chipsy", "count": 1, "price": 8 },
+  { "id": 1, "name": "Pepsi", "count": 1, "price": 5 },
+  { "id": 2, "name": "Molto", "count": 1, "price": 3 },
+  { "id": 3, "name": "Kranchy", "count": 1, "price": 10 },
+  { "id": 4, "name": "Cigarates", "count": 1, "price": 30 }
+]
