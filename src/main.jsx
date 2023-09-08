@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Nav from "./nav/nav.jsx";
 import { store } from "./Redux/store";
 import { Provider } from "react-redux";
+import Form from "./form"
+import Error from "./error"
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,21 @@ const router = createBrowserRouter([
 
   {
     path: "/nav",
-    element: <Nav setMode={"setMode"} />,
+    // @ts-ignore
+    element: <Nav  />,
   },
+  {
+    path: "/form",
+    // @ts-ignore
+    element: <Form  />,
+  },
+  {
+    path: "*",
+    // @ts-ignore
+    element: <Error  />,
+  },
+  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

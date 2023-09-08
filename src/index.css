@@ -4,3 +4,39 @@
   box-sizing: border-box;
   color: white;
 }
+.error{
+  padding-top: 55px;
+text-align: center;
+  background-color: black;
+  width:100vw;
+  height:100vh;
+  font-size: 30px;
+}
+.form{
+
+  display:flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-top: 200px;
+text-align: center;
+  background-color: rgb(5, 0, 0);
+  width:100vw;
+  height:100vh;
+  font-size: 20px;
+
+
+}
+.signIn{
+width:400px;
+text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+gap:30px;
+background-color:rgba(9, 163, 112, 0.233);
+border-radius: 15px;
+
+
+}

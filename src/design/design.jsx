@@ -7,8 +7,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Link, NavLink } from "react-router-dom";
 
-const Design = ({ deleteAll, deleteItem, decreasement, increasement , allITems, state}) => {
+const Design = ({ deleteAll, deleteItem, decreasement, increasement, allITems, state }) => {
 
 
 
@@ -17,6 +18,15 @@ const Design = ({ deleteAll, deleteItem, decreasement, increasement , allITems, 
   if (state == true) {
     return (
       <Box sx={{ mt: 2, width: { xs: "300px", sm: "60vw" } }}>
+        <NavLink to="/posts">
+          <Link to="/form">
+
+            <Button variant="contained" color="primary">
+              Sign in
+            </Button>
+          </Link>
+
+        </NavLink>
         <p
           style={{
             backgroundColor: "teal",
@@ -28,7 +38,7 @@ const Design = ({ deleteAll, deleteItem, decreasement, increasement , allITems, 
             borderRadius: 50,
           }}
         >
-          {allITems.length==0? "Empty"
+          {allITems.length == 0 ? "Empty"
             : "Total Payments" +
             allITems
               .map((each) => each.count * each.price)
