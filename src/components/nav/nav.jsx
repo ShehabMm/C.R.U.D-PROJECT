@@ -16,7 +16,7 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Button from '@mui/material/Button'
 import { Stack } from '@mui/material';
-import fixed from "../data/fixed.json";
+import fixed from "../../pages/data/fixed.json";
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 
@@ -105,10 +105,10 @@ const Nav = ({ setMode, addItem, allITems }) => {
 
               <ShoppingBasketIcon />
 
-              {allITems.length==0? "Empty"
-            : "" +
-            allITems
-              .map((each) => each.count).reduce((a, b) => a + b)}
+              {allITems.length == 0 ? "Empty"
+                : "" +
+                allITems
+                  .map((each) => each.count).reduce((a, b) => a + b)}
 
 
 
