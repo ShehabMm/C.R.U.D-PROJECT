@@ -1,4 +1,5 @@
 import { Box, Button, Stack, TextField } from "@mui/material";
+import axios from "axios";
 import { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { User } from "./context/context"
@@ -15,7 +16,7 @@ const Form = () => {
 
   const navigate = useNavigate();
   const context = useContext(User);
-console.log(context)
+  console.log(context)
   const handleSubmit = (eo) => {
     eo.preventDefault();
     if (!reg.test(email)) {
@@ -32,6 +33,17 @@ console.log(context)
     } else if (reg.test(email) == true && checkPsw == false) {
 
       navigate("/")
+      axios.post("http://localhost:8080/register", { email, psw }).then((res) => {
+
+        console.log(res)
+
+
+      }).catch((err) => {
+
+        console.log(err)
+      })
+
+
     }
 
 

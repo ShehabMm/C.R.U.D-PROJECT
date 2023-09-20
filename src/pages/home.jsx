@@ -15,7 +15,6 @@ function Home() {
   const [state, setState] = useState(true);
 
 
-
   /////All functions //////////////////////
 
 
