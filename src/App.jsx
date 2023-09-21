@@ -4,8 +4,11 @@ import Form from './pages/form';
 import Erorr from './pages/error';
 import ProtectRoutes from './pages/context/protectRoutes';
 import Nav from './components/nav/nav';
+import Products from './pages/products';
+import ProductsDetails from './pages/productsDetails';
+import AddProduct from './pages/addProduct';
 
-const App = ({setMode,addItem,allITems}) => {
+const App = ({ setMode, addItem, allITems }) => {
   return (
 
 
@@ -14,15 +17,14 @@ const App = ({setMode,addItem,allITems}) => {
       <Route path="/" element={<Home />} />
       <Route path="/form" element={<Form />} />
       <Route path="*" element={<Erorr />} />
-
-      <Route element={<ProtectRoutes />}>
-
-        <Route path="/nav" element={<Nav setMode={setMode} addItem={addItem} allITems={allITems} />}/>
-
+      <Route path="/products" element={<Products />} />
+      <Route path="/products/details/:id" element={<ProductsDetails />} />
+      <Route path="/products/AddProduct" element={<AddProduct />}/>
 
 
+        <Route element={<ProtectRoutes />}>
 
-
+          <Route path="/nav" element={<Nav setMode={setMode} addItem={addItem} allITems={allITems} />} />
         </Route >
 
 

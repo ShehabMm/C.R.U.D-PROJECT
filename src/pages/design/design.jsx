@@ -7,11 +7,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Design = ({ deleteAll, deleteItem, decreasement, increasement, allITems, state }) => {
 
-
+const navigate = useNavigate()
 
 
 
@@ -23,10 +23,20 @@ const Design = ({ deleteAll, deleteItem, decreasement, increasement, allITems, s
 
             <Button variant="contained" color="primary">
               Sign in
-            </Button>
+            </Button> <br /> <br />
+            
           </Link>
 
         </NavLink>
+        <Button onClick={()=>{
+navigate("/products")
+
+
+            }} variant="contained" color="primary">
+
+real products 
+            </Button>
+
         <p
           style={{
             backgroundColor: "teal",
