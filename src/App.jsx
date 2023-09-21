@@ -7,7 +7,7 @@ import Nav from './components/nav/nav';
 import Products from './pages/products';
 import ProductsDetails from './pages/productsDetails';
 import AddProduct from './pages/addProduct';
-
+import Search from './pages/search'
 const App = ({ setMode, addItem, allITems }) => {
   return (
 
@@ -20,7 +20,7 @@ const App = ({ setMode, addItem, allITems }) => {
       <Route path="/products" element={<Products />} />
       <Route path="/products/details/:id" element={<ProductsDetails />} />
       <Route path="/products/AddProduct" element={<AddProduct />}/>
-
+<Route path="/search"  element={<Search/>}/>
 
         <Route element={<ProtectRoutes />}>
 

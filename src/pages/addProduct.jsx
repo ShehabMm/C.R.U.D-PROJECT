@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import CircularProgress from '@mui/material/CircularProgress';
 import  CircularProgressWithLabel  from '../components/spinner';
 
 const AddProduct = () => {
@@ -10,7 +9,7 @@ const AddProduct = () => {
   const [price, setPrice] = useState(0);
   const [items, setNumber] = useState(0);
   const [id, setID] = useState(0);
-  const [caseCheck, setCase] = useState(false);
+  const [caseCheck, setCase] = useState(true);
 
   const navigate = useNavigate()
   const all = { image, name, price, items, id }
