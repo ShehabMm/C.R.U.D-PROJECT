@@ -8,6 +8,10 @@ let fin = pro.filter((item)=>{return (item.toLowerCase().includes(data) )
 
 })
 
+const sly = ["ali","tim", "tom", "you", "go"]
+
+console.log(sly.slice(0, 4))
+
   return (
     <div style={{ backgroundColor: "black", height: "100vh" }}>
       <br />
@@ -15,7 +19,7 @@ let fin = pro.filter((item)=>{return (item.toLowerCase().includes(data) )
 
         setData(eo.target.value)
         console.log(data)
-
+        sly()
       }} type="text" placeholder='type to search' style={{ color: "black" }} />
       <br /><br />
 
@@ -29,6 +33,8 @@ let fin = pro.filter((item)=>{return (item.toLowerCase().includes(data) )
         </ul>
 
       })}
+
+      <button onClick={sly}>here</button>
     </div>
   );
 }
