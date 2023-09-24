@@ -24,7 +24,9 @@ const ProductsDetails = () => {
       <h1>Name:{product.
 // @ts-ignore
       name} <hr />
-      Price:{product.price}
+      Price:{product.
+// @ts-ignore
+      price}
 
       </h1>
 

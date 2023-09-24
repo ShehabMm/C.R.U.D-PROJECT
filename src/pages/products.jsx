@@ -25,7 +25,7 @@ const rows = [
 const Products = () => {
   const [pro, setPro] = useState([]);
   const [update, setUpdate] = useState(false);
-
+  const [isTrue, setIstrue] = useState(false)
   useEffect(() => {
     console.log("Ggg")
     axios.get("http://localhost:8080/products").then((data) => {
@@ -33,27 +33,48 @@ const Products = () => {
     });
   }, [update]);
   const navigate = useNavigate();
+
+
+
+
+  const editt = (obj) => {
+    console.log(obj)
+
+
+
+
+  }
+
+  const edit = (obj) => {
+     navigate(`/editProducts/${obj._id}`)
+    console.log(obj.id)
+  }
+
+
+
   return (
     <Box
-      sx={{ display:"flex", justifyContent: "center", textAlign: "center",  }}
+      sx={{ display: "flex", justifyContent: "center", textAlign: "center", }}
     >
+
       <Stack
         direction={"column"}
-        sx={{   width:"200px", height:"100px", position:"absolute"}}
+        sx={{ width: "200px", height: "100px", position: "absolute" }}
       >
         <Typography variant="h6" color="initial" >
           Products details{" "}
         </Typography>
         <Link to="/products/AddProduct">
-        
-        <Button
-          variant="contained"
-          color="primary"
-          size="small"
-          sx={{  fontSize: "10px" }}
-        >
-          Add a new Product
-        </Button>
+
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            sx={{ fontSize: "10px" }}
+          >
+            Add a new Product
+          </Button>
+
         </Link>
       </Stack>
 
@@ -64,7 +85,7 @@ const Products = () => {
           alignItems: "center",
           display: "flex",
           mt: 15,
-          maxWidth: 850 
+          maxWidth: 850
         }}
       >
         <Table sx={{ maxWidth: 450 }} aria-label="simple table">
@@ -102,23 +123,48 @@ const Products = () => {
                   >
                     View
                   </Button>
-                  <Button variant="contained" color="error">
+
+
+
+
+                  <Button onClick={() => edit(row)} variant="contained" color="error">
                     edit
                   </Button>
-                  <Button onClick={()=>{
-
-axios.delete(`http://localhost:8080/pro/${row._id}`).then((res)=>{
-console.log(res)
 
 
-})
-setUpdate(!update)       }}  variant="contained" color="error">
+
+
+
+
+
+
+
+
+
+                  <Button onClick={() => {
+
+                    axios.delete(`http://localhost:8080/pro/${row._id}`).then((res) => {
+                      console.log(res)
+
+
+                    })
+                    setUpdate(!update)
+                  }} variant="contained" color="error">
                     delete
                   </Button>
+
                 </Stack>
               </TableRow>
             ))}
           </TableBody>
+
+
+
+
+
+
+
+
         </Table>
       </TableContainer>
     </Box>

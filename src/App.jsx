@@ -8,6 +8,8 @@ import Products from './pages/products';
 import ProductsDetails from './pages/productsDetails';
 import AddProduct from './pages/addProduct';
 import Search from './pages/search'
+import EditProducts from './pages/editProducts';
+import Table from './pages/table';
 const App = ({ setMode, addItem, allITems }) => {
   return (
 
@@ -19,15 +21,15 @@ const App = ({ setMode, addItem, allITems }) => {
       <Route path="*" element={<Erorr />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/details/:id" element={<ProductsDetails />} />
-      <Route path="/products/AddProduct" element={<AddProduct />}/>
-<Route path="/search"  element={<Search/>}/>
+      <Route path="/products/AddProduct" element={<AddProduct />} />
+      <Route path="/table" element={<Table />} />
+      <Route path="/editProducts/:id" element={<EditProducts />} />
+      <Route path="/search" element={<Search />} />
 
-        <Route element={<ProtectRoutes />}>
-
-          <Route path="/nav" element={<Nav setMode={setMode} addItem={addItem} allITems={allITems} />} />
-        </Route >
-
-
+      
+      <Route element={<ProtectRoutes />}>
+        <Route path="/nav" element={<Nav setMode={setMode} addItem={addItem} allITems={allITems} />} />
+      </Route >
     </Routes>
 
 

@@ -9,33 +9,36 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
-const Design = ({ deleteAll, deleteItem, decreasement, increasement, allITems, state }) => {
-
-const navigate = useNavigate()
-
-
+const Design = ({
+  deleteAll,
+  deleteItem,
+  decreasement,
+  increasement,
+  allITems,
+  state,
+}) => {
+  const navigate = useNavigate();
 
   if (state == true) {
     return (
       <Box sx={{ mt: 2, width: { xs: "300px", sm: "60vw" } }}>
         <NavLink to="/posts">
           <Link to="/form">
-
             <Button variant="contained" color="primary">
               Sign in
-            </Button> <br /> <br />
-            
+            </Button>{" "}
+            <br /> <br />
           </Link>
-
         </NavLink>
-        <Button onClick={()=>{
-navigate("/products")
-
-
-            }} variant="contained" color="primary">
-
-real products 
-            </Button>
+        <Button
+          onClick={() => {
+            navigate("/products");
+          }}
+          variant="contained"
+          color="primary"
+        >
+          real products
+        </Button>
 
         <p
           style={{
@@ -48,12 +51,13 @@ real products
             borderRadius: 50,
           }}
         >
-          {allITems.length == 0 ? "Empty"
+          {allITems.length == 0
+            ? "Empty"
             : "Total Payments" +
-            allITems
-              .map((each) => each.count * each.price)
-              .reduce((a, b) => a + b) +
-            "$"}
+              allITems
+                .map((each) => each.count * each.price)
+                .reduce((a, b) => a + b) +
+              "$"}
         </p>
 
         <Button
@@ -81,9 +85,6 @@ real products
           sx={{ margin: "auto", minWidth: "200px" }}
           component={Paper}
         >
-
-
-
           <Table sx={{ minWidth: 100 }} aria-label="a dense table">
             <TableHead>
               <TableRow>
@@ -95,7 +96,6 @@ real products
                 <Stack spacing={3} direction="row" sx={{ marginLeft: 4 }}>
                   <TableCell> Increase --- Decrease --- Delete Item</TableCell>
                 </Stack>
-
               </TableRow>
             </TableHead>
             <TableBody>

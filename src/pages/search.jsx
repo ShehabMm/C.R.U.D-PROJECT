@@ -3,23 +3,29 @@ import React, { useState } from 'react';
 const Search = () => {
   const [pro, setPro] = useState(["heater", "fridge", "cooker", "washingMachine"])
   const [data, setData] = useState("")
+  const [check, setcheeck] = useState(false)
 
-let fin = pro.filter((item)=>{return (item.toLowerCase().includes(data) )
 
-})
+  let fin = pro.filter((item) => {
+    return (item.toLowerCase().includes(data))
 
-const sly = ["ali","tim", "tom", "you", "go"]
+  })
+  const array1 = [1, 2, 3];
+  const array2 = [4, 5, 6];
+console.log(...array1,...array2   )
 
-console.log(sly.slice(0, 4))
-
+const make = 'Ford';
+const model = 'Mustang';
+const car = { make, model };
+console.log(car);
   return (
-    <div style={{ backgroundColor: "black", height: "100vh" }}>
+    <>  
+    <div style={{ backgroundColor: "black", height: "100vh", textAlign:"center" }}>
       <br />
       <input onChange={(eo) => {
 
         setData(eo.target.value)
         console.log(data)
-        sly()
       }} type="text" placeholder='type to search' style={{ color: "black" }} />
       <br /><br />
 
@@ -34,8 +40,26 @@ console.log(sly.slice(0, 4))
 
       })}
 
-      <button onClick={sly}>here</button>
+      <div>
+        <h2>{check?"welcome user": "plz log"       }  
+</h2>
+<button onClick={()=>{
+setcheeck(!check)
+
+}}>
+  loooooooog
+</button>
+
+
+
+
+
+      </div>
+
     </div>
+
+
+    </>
   );
 }
 
