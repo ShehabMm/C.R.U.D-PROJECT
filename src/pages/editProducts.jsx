@@ -35,10 +35,18 @@ const EditProducts = () => {
         return (
           <form >
             <h2 > {item}</h2>
-            <input type="text" name={proName} style={{ color: "black" }} placeholder={item.price} />
-            <input type="text" name="g" placeholder={item.price} />
-            <input type="text" name="d" placeholder={item.items} />
-            <input type="text" name="f" placeholder={item.id} />
+            <input type="text" name={proName} style={{ color: "black" }} placeholder={item.
+// @ts-ignore
+            price} />
+            <input type="text" name="g" placeholder={item.
+// @ts-ignore
+            price} />
+            <input type="text" name="d" placeholder={item.
+// @ts-ignore
+            items} />
+            <input type="text" name="f" placeholder={item.
+// @ts-ignore
+            id} />
 
             </form>
             )
