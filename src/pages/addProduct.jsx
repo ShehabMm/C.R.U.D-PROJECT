@@ -32,17 +32,16 @@ const AddProduct = () => {
         flexDirection: "column",
         gap: "30px",
         border: "2px solid black",
-        width: "500px",
-        height: "300px",
+        width: "100vw",
+        height: "600px",
         justifyContent: "center",
         textAlign: "center",
-        justifyItems: "center",
         alignItems: "center",
-        position: "absolute",
-        top: "100px",
-        right: "550px",
+        position: "relative",
+        color:"black"
       }}
     >
+      <h1 style={{color:"black"}}>Add a new Product</h1>
       <form
         style={{ display: "flex", flexDirection: "column", gap: "30px" }}
         onSubmit={handleSubmit}

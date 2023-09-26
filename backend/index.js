@@ -103,4 +103,26 @@ app.get('/products/:id', async (req, res) => {
     
     })
     
+
+    app.put('/products/:id', async(req, res)=>{
+
+      try {
+        const product = await Article.findByIdAndUpdate(req.params.id, req.body)
+        // we can not find product id in database 
+      if (!product) {
+        
+        return res.status(404).json({message:`can not find any product with ID ${id} `})
+      
+      }
+      const updatedProduct= await Article.findById(req.params.id)
+      res.send({ data: product, updatedProduct })
+      
+      } catch (error) {
+        res.json({ message: err.message })
+      
+      }
+      
+      
+      })
+      
     
