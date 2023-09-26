@@ -9,3 +9,5 @@ psw:String,
 const EmployeeModel  = mongoose.model ("register" ,EmployeeSchema)
 
 module.exports = EmployeeModel
+
+
