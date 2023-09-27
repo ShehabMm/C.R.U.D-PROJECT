@@ -68,6 +68,8 @@ app.get('/products/:id', async (req, res) => {
     try {
       const product = await EmployeeModel.create(req.body)
       res.status(200).json(product)
+      console.log(product)
+
     } catch (err) {
       console.log(err.message)
       res.json({ message: err.message })
@@ -79,6 +81,7 @@ app.get('/products/:id', async (req, res) => {
     try {
       const product = await Article.create(req.body)
       res.status(200).json(product)
+
     } catch (err) {
       console.log(err.message)
       res.json({ message: err.message })

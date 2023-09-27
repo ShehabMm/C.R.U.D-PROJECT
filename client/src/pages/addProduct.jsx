@@ -16,7 +16,7 @@ const AddProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8080/pro", all).then(function (response) {
+    axios.post("https://c-r-u-d-project-mongodb200.onrender.com/pro", all).then(function (response) {
       console.log(response);
     });
     setCase(false);

@@ -12,7 +12,7 @@ const ProductsDetails = () => {
 
   useEffect(() => {
 
-    axios.get(`http://localhost:8080/products/${id}`).then((data) => {
+    axios.get(`https://c-r-u-d-project-mongodb200.onrender.com/products/${id}`).then((data) => {
       setproduct(data.data.data)
     })
     console.log(product)

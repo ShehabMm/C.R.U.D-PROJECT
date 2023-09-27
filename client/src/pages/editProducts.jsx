@@ -22,7 +22,7 @@ const EditProducts = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/products/${id}`).then((data) => {
+    axios.get(`https://c-r-u-d-project-mongodb200.onrender.com/products/${id}`).then((data) => {
       console.log(data.data.data);
       setImage(data.data.data.image);
       setproName(data.data.data.name);
@@ -102,7 +102,7 @@ const EditProducts = () => {
             onClick={(e) => {
               e.preventDefault();
               axios
-                .put(`http://localhost:8080/products/${id}`, {
+                .put(`https://c-r-u-d-project-mongodb200.onrender.com/products/${id}`, {
                   image,
                   name: ProName,
                   price: proPrice,

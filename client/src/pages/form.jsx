@@ -33,7 +33,7 @@ const Form = () => {
     } else if (reg.test(email) == true && checkPsw == false) {
 
       navigate("/")
-      axios.post("http://localhost:8080/register", { email, psw }).then((res) => {
+      axios.post("https://c-r-u-d-project-mongodb200.onrender.com/register", { email, psw }).then((res) => {
 
         console.log(res)
 

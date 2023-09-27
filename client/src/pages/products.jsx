@@ -28,7 +28,7 @@ const Products = () => {
   const [isTrue, setIstrue] = useState(false)
   useEffect(() => {
     console.log("Ggg")
-    axios.get("http://localhost:8080/products").then((data) => {
+    axios.get("https://c-r-u-d-project-mongodb200.onrender.com/products").then((data) => {
       setPro(data.data.data);
     });
   }, [update]);
@@ -143,7 +143,7 @@ const Products = () => {
 
                   <Button onClick={() => {
 
-                    axios.delete(`http://localhost:8080/pro/${row._id}`).then((res) => {
+                    axios.delete(`https://c-r-u-d-project-mongodb200.onrender.com/pro/${row._id}`).then((res) => {
                       console.log(res)
 
 
